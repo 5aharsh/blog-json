@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="concept/pixels/icon.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="concept/concept.css" type="text/css"/>
+        <title>The Hobbit Holes</title>
+		<script src="concept/post.js"></script>
+		<script src="concept/main.js"></script>
+    </head>
+    <body>
+	<div class="walkingbug" onclick="style.display='none'" style="cursor:pointer;"></div>
+        <div class="main">
+			<div class="top">
+				<a href="#" class="lever" onclick="clearpage()">
+					<h1 class="tagline">
+						<i>the hobbit holes</i>
+					</h1>
+				</a>
+			</div>
+			<hr class="divider">
+			<div class="menu">
+			<a href="#post" class="lever" onclick="post()" id="postt">posts</a> \\ <a href="#stuff" class="lever" onclick="stuffs()" id="stufff">stuffs</a> \\ <a href="#search" class="lever" onclick="searched()" id="searched">search</a> \\ <a href="#more!" class="lever" onclick="more()" id="more">more!</a>
+			</div>
+			<hr class="divider">
+
+			<div id="front">
+			</div>
+
+			<div id="posts" style="display:none;">
+				<script>
+					for(var i=0; i < posts.length; i++){
+						document.write("<h2 class='title'>"+posts[i]['title']+"</h2><span class='info'>"+posts[i]['date']+" | Tag: "+posts[i]['tag']+"</span><div class='post'>"+posts[i]['content']+"</div><hr class='divider'>");
+					}
+				</script>
+			</div>
+
+			<div id="stuffs" style="display:none;">
+				<h3>stuffs</h3>
+                <p>You can post links of some of your works here</p>
+				<a href="javascript:void(0)" class="wlink">
+					Ref Link #1
+				</a>
+				<a href="javascript:void(0)" class="wlink">
+					Ref Link #2
+				</a>
+				<a href="javascript:void(0)" class="wlink">
+					Ref Link #3
+				</a>
+				<a href="javascript:void(0)" class="wlink">
+					Ref Link #4
+				</a>
+			</div>
+
+			<div id="searches" style="display:none;">
+				<h3>search posts</h3>
+				<input type="search" placeholder="some words..." id="tag" onKeyDown="findpost(event.keyCode)"/>
+				<div id="search-pane">
+				<script>
+
+				</script>
+				</div>
+			</div>
+
+			<div id="mores" style="display:none;">
+				<h3>more!</h3>
+                <p>Some social links or formal blogs etc...</p>
+				<a href="javascript:void(0)" class="wlink">
+					little less casual blog
+				</a>
+			</div>
+			<noscript>
+				<h2 style="width:65%;margin:100px auto auto auto;">your javascript is disabled, mind enabling it?</h2>
+			</noscript>
+
+        </div>
+		<script>
+			var tab = location.hash;
+
+			if(tab=="#post"){
+				post();
+			}else if(tab=="#stuff"){
+				stuffs();
+			}else if(tab=="#more!"){
+				more();
+			}else if(tab=="#search"){
+				searched();
+			}else if(tab!=""){
+				alert("Booooya!");
+			}
+		</script>
+    </body>
+</html>

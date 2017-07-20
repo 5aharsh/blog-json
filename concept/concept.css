@@ -1,0 +1,194 @@
+/*
+*
+* Saharsh Anand
+* Source - github.com/guywhogeek
+* Created - 16 May, 2017; 12:54 AM
+*
+* This is how I write CSS. Deal with it.
+*
+*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:700i|Roboto');
+
+body{
+	text-align:center;
+	font-family:'Roboto', Arial;
+	color:#ccc;
+	background:#3399ff;
+}
+
+ul{
+	list-style-type:none;
+	margin-left:-2.5em;
+}
+
+ul li{
+	margin-top:10px;
+}
+
+a{
+	color:#fff;
+	text-decoration:none;
+}
+
+a:hover, a:focus{
+	color:#999;
+}
+
+h1, h2, h3{
+	font-family:Noto Serif, Georgia, Arial;
+}
+
+.alert{
+	padding-top:20px;
+	font-size:17px;
+}
+
+.walkingbug{
+	transition:all 0.5s ease;
+	position:fixed;
+	background:url('pixels/icon.png') center no-repeat;
+	background-size:60px 60px;
+	height:60px;
+	width:60px;
+	bottom:-20px;
+	z-index:9;
+	left:0px;
+	animation:25s infinite walk;
+	animation-delay:5s;
+}
+
+@keyframes walk{
+	0% {left:0px;bottom:-30px;}
+	40% {left:900px;}
+	45%{left:0px;bottom:}
+	100% {left:0px;-10px;}
+}
+
+.walkingbug:hover{
+	bottom:-30px;
+}
+
+.main{
+	margin-right:auto;
+	margin-left:auto;
+	width:60%;
+	background:#333;
+	position:absolute;
+	top:20px;
+	left:0px;
+	right:0px;
+	min-height:90vh;
+	box-shadow:5px 5px 100px #000;
+	padding:10px 10px 40px 10px;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	.main{
+		width:90%;
+	}
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+	.main{
+		width:90%;
+	}
+}
+
+#front{
+	padding-top:95px;
+	height:60vh;
+	opacity:0.7;
+	background:url('pixels/wall.jpg') center no-repeat;
+}
+
+#front:hover{
+	opacity:1;
+}
+
+#posts{
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#posts a{
+	border-bottom:1px dotted #fff;
+}
+
+.title{
+	color:#fff;
+	margin-top:70px;
+}
+
+.info{
+	font-size:13px;
+	padding:4px 8px 4px 8px;
+	background:#fff;
+	color:#333;
+}
+
+.post{
+	color:#fff;
+}
+
+.divider{
+	width:70%;
+}
+
+.lever{
+	cursor:pointer;
+	font-weight:bold;
+	display:inline-block;
+}
+
+::selection{
+	background:#333;
+	color:#fff;
+}
+
+#tag{
+	text-align:center;
+	background:#999;
+	border:none;
+	padding:10px;
+	color:#404040;
+	font:18px roboto;
+	margin-right:5px;
+	border-radius:5px;
+	box-shadow:inset 1px 2px 10px #000;
+	width:50%;
+	transition:all 0.2s ease;
+}
+
+#tag:focus{
+	outline:none;
+	background:#d9d9d9;
+	font-weight:bold;
+	width:70%;
+}
+
+#searches{
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:30px;
+}
+
+#stuffs{
+	padding:30px;
+}
+
+.wlink{
+	padding:10px;
+	display:inline-block;
+	margin:10px;
+	outline:2px solid cyan;
+}
+
+#mores{
+	padding-top:30px;
+}
