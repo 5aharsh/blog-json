@@ -1,6 +1,6 @@
 # Blog Json
 
-Functioning preview [here](https://raw.githack.com/guywhogeek/blog-json/master/main.html).
+Functioning preview [here](https://5aharsh.github.io/blog-json/main.html).
 
 A blog structure built on top of JavaScript and JSON
 
